@@ -27,7 +27,7 @@ import com.gestion_du_departement.demo.web.service.EnseignantService;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "/")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/Enseignant")
 public class EnseignantController {
 
