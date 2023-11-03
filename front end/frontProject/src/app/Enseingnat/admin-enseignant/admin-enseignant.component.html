@@ -1,4 +1,8 @@
 <h1>Liste Ensignanat</h1>
+<div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Ajouter Ensignanat</button>
+
+</div>
 <div class="container">
   <table class="table table-striped">
     <thead>
@@ -28,7 +32,7 @@
         <td>{{item.adresse}}</td>
         <td>{{item.matiere}}</td>
         <td>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" routerLink="/updatee/{{item.id}}">modifier</button>
+          <button type="button" class="btn btn-primary"  routerLink="/updatee/{{item.id}}">modifier</button>
           <button type="button" class="btn btn-danger" (click)="onsubmit(item.id)" >supprimer</button>
 
         </td>
@@ -45,3 +49,80 @@
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="registerForm">
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <input type="text" formControlName="nom" #nom class="form-control" id="floatingInput" placeholder="name@example.com" name="nom"  >
+                <label for="floatingInput">nom</label>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="form-floating mb-3">
+                <input type="text" formControlName="prenom" #prenom class="form-control" id="floatingPassword" placeholder="name@example.com" name="prenom" >
+                <label for="floatingPassword">prenom</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <input type="email" formControlName="email" #email class="form-control" id="floatingInput" placeholder="name@example.com" name="email" >
+                <label for="floatingInput">Email</label>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="form-floating">
+                <input type="number" formControlName="cin" #cin name="cin" placeholder="name@example.com"  class="form-control" id="floatingPassword"  >
+                <label for="floatingPassword">CIN</label>
+              </div>
+            </div>
+          </div>
+
+           <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <input type="text" formControlName="adresse"  #adresse class="form-control" id="floatingInput" placeholder="name@example.com" name="adresse"  >
+                <label for="floatingInput">Adresse</label>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="form-floating">
+                <input type="number" formControlName="phonenumber"  #phonenumber name="phonenumber" placeholder="name@example.com" class="form-control" id="floatingPassword"   >
+                <label for="floatingPassword">Numéro de telephone</label>
+              </div>
+            </div>
+          </div>
+
+         <div class="row">
+            <div class="col">
+              <div class="form-floating">
+                <input type="text" #matiere formControlName="matiere" name="matiere" (ngMode)="matiere" placeholder="name@example.com" class="form-control" id="floatingPassword"  >
+                <label for="floatingPassword">Matiere</label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
+        <button type="button" class="btn btn-primary" (click)="addenseingnat()">ajoute enseignante</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
