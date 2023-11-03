@@ -8,10 +8,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ServiceEnseingnatService {
 
+  private URL ="http://localhost:8083/Enseignant/"
+
   constructor(private httpenseingnat:HttpClient) { }
 
-  getEnseingnat()
+  getEnseingnats()
   {
-    return this.httpenseingnat.get("http://localhost:8081/Enseignant/AllEnseignant");
+    return this.httpenseingnat.get(this.URL+"AllEnseignant");
   }
+
+  getEnseingnatbyid(id:any)
+  {
+    return this.httpenseingnat.get(this.URL+"byid/"+id);
+  }
+
+  deleteEnseingnat(id:any)
+  {
+    return this.httpenseingnat.delete(this.URL+"deleteEnseignant/"+id);
+  }
+
+
 }

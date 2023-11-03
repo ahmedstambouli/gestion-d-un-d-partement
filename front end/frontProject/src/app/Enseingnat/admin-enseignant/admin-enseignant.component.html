@@ -1,4 +1,4 @@
-
+<h1>Liste Ensignanat</h1>
 <div class="container">
   <table class="table table-striped">
     <thead>
@@ -11,30 +11,37 @@
         <th scope="col">telephone</th>
         <th scope="col">adresse</th>
         <th scope="col">matière</th>
+        <th scope="col"></th>
 
 
 
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of enseingnat">
+      <tr *ngFor="let item of this.enseingnat">
         <th scope="row">{{item.id}}</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>{{item.nom}}</td>
+        <td>{{item.prenom}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.cin}}</td>
+        <td>{{item.phoneNumber}}</td>
+        <td>{{item.adresse}}</td>
+        <td>{{item.matiere}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" routerLink="/updatee/{{item.id}}">modifier</button>
+          <button type="button" class="btn btn-danger" (click)="onsubmit(item.id)" >supprimer</button>
+
+        </td>
+
+
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
+
+
     </tbody>
   </table>
 </div>
+
+
+
+
 

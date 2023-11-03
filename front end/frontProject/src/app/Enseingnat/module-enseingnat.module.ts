@@ -5,7 +5,7 @@ import { ProfilEnseingnatComponent } from './profil-enseingnat/profil-enseingnat
 import { NavbarEnseingnatComponent } from './navbar-enseingnat/navbar-enseingnat.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminEnseignantComponent } from './admin-enseignant/admin-enseignant.component';
-import { BrowserModule } from '@angular/platform-browser';
+import { UpdateenseignatComponent } from './updateenseignat/updateenseignat.component';
 
 
 
@@ -15,6 +15,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 const routes:Routes=[
   {path:'admin' ,component:AdminEnseignantComponent},
+  {path:"updatee/:id",component:UpdateenseignatComponent},
+
   {path:'home', component:HomeEnseingnatComponent , children:[
     {path:'profilenseingnat',component:ProfilEnseingnatComponent}
 
@@ -26,10 +28,12 @@ const routes:Routes=[
   declarations: [
     HomeEnseingnatComponent,
     ProfilEnseingnatComponent,
-    NavbarEnseingnatComponent
+    NavbarEnseingnatComponent,
+    AdminEnseignantComponent,
+    UpdateenseignatComponent
   ],
   imports: [
-    BrowserModule,
+
     CommonModule,
     RouterModule.forRoot(routes)
 
