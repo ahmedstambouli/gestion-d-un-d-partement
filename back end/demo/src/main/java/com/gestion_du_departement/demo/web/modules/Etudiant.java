@@ -97,6 +97,13 @@ public class Etudiant {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+      public int getnb_absence() {
+        return nb_absence;
+    }
+
+    public void setnb_absence(int nb_absence) {
+        this.nb_absence = nb_absence;
+    }
 }
 
     

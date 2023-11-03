@@ -5,15 +5,18 @@ import { ModuleEnseingnatModule } from './Enseingnat/module-enseingnat.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EtudiantComponent } from './etudiant/etudiant.component';
 
 const routes:Routes=[
 
-  {path:"",component:AcceuilComponent}
+  {path:"",component:AcceuilComponent},
+  { path: 'etudiant', component: EtudiantComponent }
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    AcceuilComponent
+    AcceuilComponent,
+    EtudiantComponent
 
   ],
   imports: [
