@@ -6,6 +6,8 @@ import { NavbarEnseingnatComponent } from './navbar-enseingnat/navbar-enseingnat
 import { RouterModule, Routes } from '@angular/router';
 import { AdminEnseignantComponent } from './admin-enseignant/admin-enseignant.component';
 import { UpdateenseignatComponent } from './updateenseignat/updateenseignat.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -18,7 +20,9 @@ const routes:Routes=[
   {path:"updatee/:id",component:UpdateenseignatComponent},
 
   {path:'home', component:HomeEnseingnatComponent , children:[
-    {path:'profilenseingnat',component:ProfilEnseingnatComponent}
+    {path:'profilenseingnat',component:ProfilEnseingnatComponent},
+    {path:'profilenseingnat/:id',component:ProfilEnseingnatComponent}
+
 
   ]},
 
@@ -35,7 +39,9 @@ const routes:Routes=[
   imports: [
 
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule
 
 
   ]
