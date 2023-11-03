@@ -48,20 +48,20 @@
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
-                  <form class="form" novalidate="">
+                  <form [formGroup]="registerForm" novalidate="">
                     <div class="row">
                       <div class="col">
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Last Name</label>
-                              <input class="form-control" type="text" name="name" placeholder="user Last name" >
+                              <label>nom</label>
+                              <input type="text" class="form-control" formControlName="nom" #nom  name="name" placeholder="nom"  [(ngModel)]="enseingnat.nom">
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
-                              <label>first name</label>
-                              <input class="form-control" type="text" name="username" placeholder="user first name" >
+                              <label>prenom</label>
+                              <input class="form-control" type="text"  formControlName="prenom" name="prenom" placeholder="prenom" [(ngModel)]="enseingnat.prenom" >
                             </div>
                           </div>
                         </div>
@@ -69,7 +69,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Email</label>
-                              <input class="form-control" type="text" placeholder="user@example.com">
+                              <input class="form-control" type="text" placeholder="user@example.com" name="email" formControlName="email" [(ngModel)]="enseingnat.email">
                             </div>
                           </div>
                         </div>
@@ -77,58 +77,36 @@
                           <div class="col">
                             <div class="form-group">
                               <label>CIN</label>
-                              <input class="form-control" type="number" name="name" placeholder="10511512" >
+                              <input class="form-control" type="number" name="cin" placeholder="10511512" formControlName="cin" [(ngModel)]="enseingnat.cin">
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Phone Numbe</label>
-                              <input class="form-control" type="number" name="username" placeholder="53804490" >
+                              <input class="form-control" type="number" name="phonenumber" placeholder="53804490" formControlName="phonenumber" [(ngModel)]="enseingnat.phoneNumber">
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Subject</label>
-                              <input class="form-control" type="text" placeholder="android">
+                              <label>adresse</label>
+                              <input class="form-control" type="text" placeholder="adresse" name="adresse" formControlName="adresse" [(ngModel)]="enseingnat.adresse" >
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label>matiere</label>
+                              <input class="form-control" type="text" placeholder="android" name="matiere" formControlName="matiere" [(ngModel)]="enseingnat.matiere">
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12 col-sm-6 mb-3">
-                        <div class="mb-2"><b>Change Password</b></div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Current Password</label>
-                              <input class="form-control" type="password" placeholder="••••••">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>New Password</label>
-                              <input class="form-control" type="password" placeholder="••••••">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" placeholder="••••••"></div>
-                          </div>
-                        </div>
-                      </div>
 
-                    </div>
                     <div class="row">
                       <div class="col d-flex justify-content-end">
-                        <button class="btn btn-primary" type="submit">Save Changes</button>
+                        <button class="btn btn-primary" type="submit" style="margin-top: 5%;" (click)="updateenseingnat()">Save Changes</button>
                       </div>
                     </div>
                   </form>

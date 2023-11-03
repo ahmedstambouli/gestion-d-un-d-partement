@@ -3,9 +3,9 @@ export class Enseingnat{
   adresse!:string
   cin!:string
   email!:string
-  matière!:string
+  matiere!:string
   nom!:string
-  phone_number	!:string
+  phoneNumber	!:string
   prenom!:string
 
 }
