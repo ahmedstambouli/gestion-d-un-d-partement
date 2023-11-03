@@ -1,0 +1,99 @@
+
+<div class="container">
+    <h2>Mis ajour</h2>
+  <form [formGroup]="registerForm">
+  >
+    <div class="modal-body">
+  
+      <div class="row">
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" #nom class="form-control" id="floatingInput" formControlName="nom" placeholder="name@example.com" name="nom" value="{{ Etudiant.nom }}"   >
+            <label for="floatingInput">nom</label>
+          </div>
+  
+        </div>
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" #prenom name="prenom" (ngMode)="prenom"  class="form-control" id="floatingPassword" value="{{ Etudiant.prenom }}" formControlName="prenom"
+            >
+            <label for="floatingPassword">prenom</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="email" #email class="form-control" id="floatingInput" placeholder="name@example.com" name="email" (ngMode)="email" value="{{ Etudiant.mail }}"  formControlName="mail"
+            >
+            <label for="floatingInput">Email</label>
+          </div>
+  
+        </div>
+        <div class="col">
+          <div class="form-floating">
+            <input type="number" #cin name="cin" (ngMode)="cin"  class="form-control" id="floatingPassword"  value="{{Etudiant.cin}}" formControlName="cin"
+            >
+            <label for="floatingPassword">CIN</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" #adresse class="form-control" id="floatingInput" placeholder="name@example.com" name="adresse" (ngMode)="adresse" value="{{Etudiant.adresse}}" formControlName="adresse"
+            >
+            <label for="floatingInput">Adresse</label>
+          </div>
+  
+        </div>
+        <div class="col">
+          <div class="form-floating">
+            <input type="number" #phonenumber name="phonenumber" (ngMode)="phonenumber"  class="form-control" id="floatingPassword" value="{{Etudiant.phoneNumber}}" formControlName="phonenumber">
+            <label for="floatingPassword">Numéro de telephone</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" #dateNaissance name="dateNaissance" (ngMode)="dateNaissance"  class="form-control" id="floatingPassword" value="{{ Etudiant.dateNaissance }}" formControlName="dateNaissance ">
+            <label for="floatingPassword">dateNaissance</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" #absence name="absence" (ngMode)="absence"  class="form-control" id="floatingPassword" value="{{ Etudiant.absence }}"  formControlName="absence">
+            <label for="floatingPassword">absence</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" #niveau name="niveau" (ngMode)="niveau"  class="form-control" id="floatingPassword" value="{{ Etudiant.niveau }}"  formControlName="niveau">
+            <label for="floatingPassword">niveau</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col">
+          <div class="form-floating" >
+            <input type="submit" value="Mise a joure" class="btn btn-primary" style="margin-top: 5%; width: 100%;"(click)="updateEtudiant()" >
+  
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
+  </div>
+  

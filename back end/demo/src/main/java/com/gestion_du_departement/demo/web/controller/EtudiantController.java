@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,8 @@ import com.gestion_du_departement.demo.web.modules.Etudiant;
 import com.gestion_du_departement.demo.web.repository.EtudiantRepository;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
+
 @RequestMapping("/etudiant")
 public class EtudiantController {
 
@@ -56,5 +59,6 @@ public class EtudiantController {
     public void deleteEtudiant(@PathVariable long id) {
         etudiantRepository.deleteById(id);
     }  
+    
     
 }

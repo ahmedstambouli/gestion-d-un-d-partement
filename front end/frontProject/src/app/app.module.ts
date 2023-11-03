@@ -5,29 +5,40 @@ import { ModuleEnseingnatModule } from './Enseingnat/module-enseingnat.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EtudiantComponent } from './etudiant/etudiant.component';
+import { EtudiantComponent } from './etudiant/EtudiantComponent';
+import { DataService } from './data.service';
+import { UpdateEtudComponent } from './etudiant/update-etud/update-etud.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 const routes:Routes=[
 
   {path:"",component:AcceuilComponent},
-  { path: 'etudiant', component: EtudiantComponent }
+  { path: 'etudiant', component: EtudiantComponent },
+  { path: 'update-etud/:id', component: UpdateEtudComponent }
+
 ]
 @NgModule({
   declarations: [
     AppComponent,
     AcceuilComponent,
-    EtudiantComponent
+    EtudiantComponent,
+    UpdateEtudComponent
 
   ],
   imports: [
     BrowserModule,
     ModuleEnseingnatModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
+
 
 
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
