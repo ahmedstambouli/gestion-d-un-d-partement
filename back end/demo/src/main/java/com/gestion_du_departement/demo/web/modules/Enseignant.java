@@ -44,7 +44,7 @@ public class Enseignant {
     @Length(min = 8,max = 12)
     private String phoneNumber;
     @NotBlank(message = "is required")
-    private String matière;
+    private String matiere;
 
 }
 
