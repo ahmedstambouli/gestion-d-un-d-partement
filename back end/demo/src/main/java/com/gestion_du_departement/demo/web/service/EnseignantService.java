@@ -70,7 +70,7 @@ public class EnseignantService implements Interfaceenseignant {
                 enseignant2.setCin(enseignant.getCin());
                 enseignant2.setPhoneNumber(enseignant.getPhoneNumber());
                 enseignant2.setAdresse(enseignant.getAdresse());
-                enseignant2.setMatière(enseignant.getMatière());
+                enseignant2.setMatiere(enseignant.getMatiere());
                 enseingnatRepository.save(enseignant2);
                 return new ResponseEntity<String>("Update successfuly ",HttpStatus.ACCEPTED);
 

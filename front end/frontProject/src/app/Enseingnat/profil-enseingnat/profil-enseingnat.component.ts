@@ -12,7 +12,7 @@ export class ProfilEnseingnatComponent implements OnInit {
   constructor(private serviceensignat:ServiceEnseingnatService){}
 
   ngOnInit() {
-    this.serviceensignat.getEnseingnat().subscribe({
+    this.serviceensignat.getEnseingnats().subscribe({
       next:(data) =>{
         console.log('Donnees enregistrées : ', data);
         },

@@ -1,0 +1,75 @@
+
+<div class="container">
+  <h2>Mis ajour</h2>
+<form action="">
+  <div class="modal-body">
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" #nom class="form-control" id="floatingInput" placeholder="name@example.com" name="nom" (ngMode)="nom" value="{{enseingnat.nom}}">
+          <label for="floatingInput">nom</label>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="form-floating">
+          <input type="text" #prenom name="prenom" (ngMode)="prenom"  class="form-control" id="floatingPassword" value="{{enseingnat.prenom}}">
+          <label for="floatingPassword">prenom</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="email" #email class="form-control" id="floatingInput" placeholder="name@example.com" name="email" (ngMode)="email" value="{{enseingnat.email}}">
+          <label for="floatingInput">Email</label>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="form-floating">
+          <input type="number" #cin name="cin" (ngMode)="cin"  class="form-control" id="floatingPassword" value="{{enseingnat.cin}}">
+          <label for="floatingPassword">CIN</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" #adresse class="form-control" id="floatingInput" placeholder="name@example.com" name="adresse" (ngMode)="adresse" value="{{enseingnat.adresse}}">
+          <label for="floatingInput">Adresse</label>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="form-floating">
+          <input type="number" #phonenumber name="phonenumber" (ngMode)="phonenumber"  class="form-control" id="floatingPassword" value="{{enseingnat.phoneNumber}}">
+          <label for="floatingPassword">Numéro de telephone</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating">
+          <input type="text" #matiere name="matiere" (ngMode)="matiere"  class="form-control" id="floatingPassword" value="{{enseingnat.matiere}}">
+          <label for="floatingPassword">Matiere</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-floating" >
+          <input type="submit" value="Mise a joure" class="btn btn-primary" data-bs-dismiss="modal" style="margin-top: 5%; width: 100%;" >
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+</div>
