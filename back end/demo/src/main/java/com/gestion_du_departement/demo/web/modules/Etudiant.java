@@ -1,7 +1,4 @@
 package com.gestion_du_departement.demo.web.modules;
-
-    import java.sql.Date;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,13 +11,13 @@ public class Etudiant {
     private long id;
     private String nom;
     private String prenom;
-    private Date dateNaissance;
+    private String dateNaissance;
     private int cin;
     private String niveau;
     private String mail;
     private String adresse;
     private String phoneNumber;
-    private int nb_absence;
+    private boolean absence;
 
     public Etudiant() {
         // Default no-args constructor
@@ -50,11 +47,11 @@ public class Etudiant {
         this.prenom = prenom;
     }
 
-    public Date getDateNaissance() {
+    public String getDateNaissance() {
         return dateNaissance;
     }
 
-    public void setDateNaissance(Date dateNaissance) {
+    public void setDateNaissance(String dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 
@@ -96,6 +93,13 @@ public class Etudiant {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+      public boolean getnb_absence() {
+        return absence;
+    }
+
+    public void setnb_absence(boolean nb_absence) {
+        this.absence = absence;
     }
 }
 

@@ -1,0 +1,44 @@
+<h1>Liste Etudiant</h1>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nom</th>
+        <th scope="col">prenom</th>
+        <th scope="col">dateNaissance</th>
+        <th scope="col">email</th>
+        <th scope="col">cin</th>
+        <th scope="col">phoneNumber</th>
+        <th scope="col">adresse</th>
+        <th scope="col">niveau</th>
+        <th scope="col">absence</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let etudiant of Etudiant">
+            <td>{{ etudiant.id }}</td>
+            <td>{{ etudiant.nom }}</td>
+            <td>{{ etudiant.prenom }}</td>
+            <td>{{ etudiant.dateNaissance }}</td>
+            <td>{{ etudiant.mail }}</td>
+            <td>{{ etudiant.cin }}</td>
+            <td>{{ etudiant.phoneNumber }}</td>
+            <td>{{ etudiant.adresse }}</td>
+            <td>{{ etudiant.niveau }}</td>
+            <td>{{ etudiant.absence }}</td>
+            <td>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  routerLink="/update-etud/{{ etudiant.id }}">modifier</button>
+                <button type="button" class="btn btn-danger"  >supprimer</button>
+      
+              </td>
+          </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
